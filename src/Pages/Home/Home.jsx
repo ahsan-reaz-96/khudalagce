@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
 import Category from "../Category/Category";
+import KhudalagceIntro from "../../Components/khudalagceIntro/KhudalagceIntro";
 
 
 const Home = () => {
@@ -15,6 +16,9 @@ const Home = () => {
             </div>
             <div>
                 <Category></Category>
+            </div>
+            <div>
+                <KhudalagceIntro></KhudalagceIntro>
             </div>
             
         </div>

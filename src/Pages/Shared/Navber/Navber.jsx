@@ -17,7 +17,7 @@ const Navber = () => {
 
             {/* bg-gradient-to-r from-purple-500 to-pink-500 opacity-30 */}
 
-            <div className="navbar fixed z-30 max-w-6xl  ">
+            <div className="navbar fixed z-30 max-w-6xl bg-black opacity-90 rounded-b-lg ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
