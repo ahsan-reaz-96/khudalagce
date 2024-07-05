@@ -9,12 +9,12 @@ import img7 from "../../assets/home/banner.jpg";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
-import { Helmet } from "react-helmet-async";
+
 
 const Banner = () => {
     return (
         <div>
-            <Helmet><title>khudalagce | banner</title></Helmet>
+            
             <Carousel>
                 <div>
                     <img src={img1} />
