@@ -17,6 +17,7 @@
     "react-helmet-async": "^2.0.5",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.24.0",
+    "simple-parallax-js": "^6.0.1",
     "sort-by": "^1.2.0",
     "swiper": "^11.1.4"
   },
