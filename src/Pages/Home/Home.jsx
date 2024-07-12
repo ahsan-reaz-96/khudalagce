@@ -5,6 +5,7 @@ import KhudalagceIntro from "../../Components/khudalagceIntro/KhudalagceIntro";
 import PopularMenu from "../PopularMenu/PopularMenu";
 import CallUs from "../../Components/CallUs/CallUs";
 import HomeFeature from "../HomeFeature/HomeFeature";
+import Testimonials from "./Testimonials/Testimonials";
 
 
 const Home = () => {
@@ -31,6 +32,9 @@ const Home = () => {
             </div>
             <div>
                 <HomeFeature></HomeFeature>
+            </div>
+            <div>
+                <Testimonials></Testimonials>
             </div>
             
         </div>
