@@ -1,6 +1,8 @@
 
 
-const ShopCard = () => {
+const ShopCard = ({items}) => {
+
+    const {name, image, price, recipe} = items;
     return (
         <div>
             <div className="card bg-base-100 w-96 shadow-xl">
