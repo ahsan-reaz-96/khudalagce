@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 
-
+import errorImg from "../../assets/404.gif"
 const ErrorElement = () => {
     return (
-        <div>
+        <div className="max-w-6xl mx-auto p-10">
 
-            <h1>Data is not found</h1>
-            <Link to="/">Go to Home</Link>
+            <img src={errorImg} alt="" />
+
+            
+            <Link to="/" className="btn btn-primary text-white font-cursive items-center text-center">Go to Home</Link>
             
         </div>
     );

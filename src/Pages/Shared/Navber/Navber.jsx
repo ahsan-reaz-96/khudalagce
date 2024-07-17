@@ -7,6 +7,7 @@ const Navber = () => {
 
         <li><Link to="/">Home</Link></li>
         <li><Link to="/menu">Menu</Link></li>
+        <li><Link to="/shop">Shop</Link></li>
         <li><Link to="/registration">Registration</Link></li>
         <li><Link to="/login">Login</Link></li>
         <li><Link to="/user">User</Link></li>
@@ -37,7 +38,7 @@ const Navber = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu text-xl  dropdown-content text-white rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu  dropdown-content text-white rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             {
                                 links
                             }
@@ -45,13 +46,13 @@ const Navber = () => {
                     </div>
                     <a className=" text-xl">
                         <div className="form-control">
-                            <h1 className=" text-4xl font-cursive font-extrabold text-green-700 p-4  italic">
+                            <h1 className=" text-xl font-cursive font-bold text-green-700 p-4  italic">
                                 Khu-<span className="text-yellow-400">da-lag</span>-ce</h1>
                         </div>
                     </a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu  menu-horizontal text-xl text-white px-1">
+                    <ul className="menu  menu-horizontal  text-white px-1">
                         {
                             links
                         }
