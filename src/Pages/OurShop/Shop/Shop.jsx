@@ -7,16 +7,18 @@ import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
 import UseMenu from "../../../Hook/UseMenu";
 
+import ShopTab from "../ShopTab/ShopTab";
+
 const Shop = () => {
 
     const [tabindex, setTabindex] = useState(0);
     const [menu] = UseMenu();
 
-    const salad = menu.filter(items=>items.category === 'salad');
+    const salad = menu.filter(items => items.category === 'salad');
     const dessert = menu.filter(items => items.category === 'dessert');
     const pizza = menu.filter(items => items.category === 'pizza');
     const drinks = menu.filter(items => items.category === 'drinks');
-    const soup = menu.filter(items => items.category === 'soup'); 
+    const soup = menu.filter(items => items.category === 'soup');
     return (
         <div>
             <Helmet>
@@ -36,11 +38,21 @@ const Shop = () => {
                         <Tab>DESSERT</Tab>
                         <Tab>DRINKS</Tab>
                     </TabList>
-                    <TabPanel></TabPanel>
-                    <TabPanel></TabPanel>
-                    <TabPanel></TabPanel>
-                    <TabPanel></TabPanel>
-                    <TabPanel></TabPanel>
+                    <TabPanel>
+                        <ShopTab items={salad}></ShopTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <ShopTab items={dessert}></ShopTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <ShopTab items={pizza}></ShopTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <ShopTab items={drinks}></ShopTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <ShopTab items={soup}></ShopTab>
+                    </TabPanel>
                 </Tabs>
             </div>
 
