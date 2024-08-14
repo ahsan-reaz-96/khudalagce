@@ -8,16 +8,22 @@ import { useState } from "react";
 import UseMenu from "../../../Hook/UseMenu";
 
 import ShopTab from "../ShopTab/ShopTab";
+import { useParams } from "react-router-dom";
 
 const Shop = () => {
 
-    const [tabindex, setTabindex] = useState(0);
+    const categories = ['salad','dessert', 'pizza', 'drink', 'soup' ]
+    const {category} = useParams();
+    const initialIndex = categories.indexOf(category)
+    const [tabindex, setTabindex] = useState(initialIndex);
     const [menu] = UseMenu();
+    
+    console.log(category);
 
     const salad = menu.filter(items => items.category === 'salad');
     const dessert = menu.filter(items => items.category === 'dessert');
     const pizza = menu.filter(items => items.category === 'pizza');
-    const drinks = menu.filter(items => items.category === 'drinks');
+    const drink = menu.filter(items => items.category === 'drinks');
     const soup = menu.filter(items => items.category === 'soup');
     return (
         <div>
@@ -33,10 +39,10 @@ const Shop = () => {
                 <Tabs defaultIndex={tabindex} onSelect={(index) => setTabindex(index)}>
                     <TabList>
                         <Tab>SALAD</Tab>
-                        <Tab>PIZZA</Tab>
-                        <Tab>SOUPS</Tab>
                         <Tab>DESSERT</Tab>
+                        <Tab>PIZZA</Tab>
                         <Tab>DRINKS</Tab>
+                        <Tab>SOUPS</Tab>                        
                     </TabList>
                     <TabPanel>
                         <ShopTab items={salad}></ShopTab>
@@ -48,7 +54,7 @@ const Shop = () => {
                         <ShopTab items={pizza}></ShopTab>
                     </TabPanel>
                     <TabPanel>
-                        <ShopTab items={drinks}></ShopTab>
+                        <ShopTab items={drink}></ShopTab>
                     </TabPanel>
                     <TabPanel>
                         <ShopTab items={soup}></ShopTab>

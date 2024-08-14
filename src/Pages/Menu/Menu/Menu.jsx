@@ -9,6 +9,7 @@ import dessertImg from "../../../assets/menu/dessert-bg.jpeg";
 import imgsalad from "../../../assets/menu/salad-bg.jpg";
 import imgpizza from "../../../assets/menu/pizza-bg.jpg";
 import imgsoup from "../../../assets/menu/soup-bg.jpg";
+import imgDrink from "../../../assets/menu/drink.jpg";
 
 
 
@@ -20,6 +21,7 @@ const Menu = () => {
     const salad = menu.filter(item => item.category === 'salad');
     const pizza =  menu.filter(item=> item.category === 'pizza');
     const soup = menu.filter(item => item.category === 'soup');
+    const drink = menu.filter(item => item.category === 'drinks');
     return (
         <div>
             <Helmet>
@@ -36,17 +38,20 @@ const Menu = () => {
                 <MenuCategory items={offered}></MenuCategory>
             </div>
             <div className="mt-4">
-                <Cover img={dessertImg} title={"Desserts"} subtitle={"Would you like to try our dish"}></Cover>
-                <MenuCategory items={dessert}></MenuCategory>
+                {/* <Cover img={dessertImg} title={"desserts"} subtitle={"Would you like to try our dish"}></Cover> */}
+                <MenuCategory items={dessert} title={"dessert"} coverImg={dessertImg}></MenuCategory>
             </div>
             <div>
-                <MenuCategory items={salad} title={"SALAD"} coverImg={imgsalad}></MenuCategory>
+                <MenuCategory items={salad} title={"salad"} coverImg={imgsalad}></MenuCategory>
             </div>
             <div>
-                <MenuCategory items={pizza} title={"Pizza"} coverImg={imgpizza}></MenuCategory>
+                <MenuCategory items={pizza} title={"pizza"} coverImg={imgpizza}></MenuCategory>
             </div>
             <div>
-                <MenuCategory items={soup} title={"Soup"} coverImg={imgsoup}></MenuCategory>
+                <MenuCategory items={drink} title={"drink"} coverImg={imgDrink}></MenuCategory>
+            </div>
+            <div>
+                <MenuCategory items={soup} title={"soup"} coverImg={imgsoup}></MenuCategory>
             </div>
             
             

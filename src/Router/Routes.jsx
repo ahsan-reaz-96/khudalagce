@@ -34,7 +34,7 @@ import Shop from "../Pages/OurShop/Shop/Shop";
           element:<Menu></Menu>
         },
         {
-          path:'/shop',
+          path:'/shop/:category',
           element:<Shop></Shop>
         }
       ]
